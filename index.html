@@ -1024,11 +1024,11 @@
         async function loadExternalData() {
 
             // Streets → GitHub Release asset
-            const streetsResp = await fetch(
-                "https://github.com/Khansa-Gulshad/Gdansk_street_level_greenery_map/releases/download/data/streets.geojson"
-            );
-            if (!streetsResp.ok) throw new Error("Failed to load streets: " + streetsResp.status);
-            geojsonData = await streetsResp.json();
+            const streetsResp = await fetch("data/streets.geojson");
+			if (!streetsResp.ok) {
+				throw new Error("Failed to load streets: " + streetsResp.status);
+			}
+			geojsonData = await streetsResp.json();
 
             // Districts → local repo data folder
             const districtsResp = await fetch("data/districts.geojson");
