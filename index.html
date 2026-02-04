@@ -164,8 +164,34 @@
         }
 
         .info-card-icon {
-            font-size: 20px;
+            width: 22px;
+            height: 22px;
             flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        .header-icon {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+
+        .step-guide-icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        .step-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-right: 6px;
         }
 
         .info-card-title {
@@ -902,7 +928,7 @@
     <div id="infoModal" class="info-modal">
         <div class="info-content">
             <div class="info-header">
-                <h2>🗺️ About this map</h2>
+                <h2><img class="header-icon" src="icons/map.png" alt=""> About this map</h2>
                 <button class="close-btn" onclick="closeInfo()">×</button>
             </div>
 
@@ -913,12 +939,12 @@
 
             <!-- How to explore -->
             <div class="step-guide">
-                <h3>👣 How to explore</h3>
+                <h3><img class="step-guide-icon" src="icons/explore.png" alt=""> How to explore</h3>
                 <ol>
-                    <li>1️⃣ Zoom out → compare districts</li>
-                    <li>2️⃣ Zoom in → explore individual streets</li>
-                    <li>3️⃣ Switch indices → greenery, imperviousness, open space</li>
-                    <li>4️⃣ Highlight poor streets → explore tree planting scenarios</li>
+                    <li><img class="step-icon" src="icons/icons8-zoom-out-64.png" alt=""> Zoom out → compare districts</li>
+                    <li><img class="step-icon" src="icons/icons8-zoom-in-64.png" alt=""> Zoom in → explore individual streets</li>
+                    <li><img class="step-icon" src="icons/switch indices.png" alt=""> Switch indices → greenery, imperviousness, open space</li>
+                    <li><img class="step-icon" src="icons/highlight poor streets.png" alt=""> Highlight poor streets → explore tree planting scenarios</li>
                 </ol>
             </div>
 
@@ -927,7 +953,7 @@
 
             <div class="info-card">
                 <div class="info-card-header">
-                    <span class="info-card-icon">🌳</span>
+                    <img class="info-card-icon" src="icons/GVI.png" alt="GVI">
                     <span class="info-card-title">Green View Index (GVI)</span>
                 </div>
                 <div class="info-card-summary">How green does a street look to a pedestrian?</div>
@@ -942,7 +968,7 @@
 
             <div class="info-card">
                 <div class="info-card-header">
-                    <span class="info-card-icon">🧱</span>
+                    <img class="info-card-icon" src="icons/IAI.png" alt="IAI">
                     <span class="info-card-title">Impervious Area Index (IAI)</span>
                 </div>
                 <div class="info-card-summary">How built-up does the street appear?</div>
@@ -957,7 +983,7 @@
 
             <div class="info-card">
                 <div class="info-card-header">
-                    <span class="info-card-icon">⬜</span>
+                    <img class="info-card-icon" src="icons/OSI.png" alt="OSI">
                     <span class="info-card-title">Open Space Index (OSI)</span>
                 </div>
                 <div class="info-card-summary">How much open, non-built space is visible?</div>
@@ -973,7 +999,7 @@
             <!-- Tree planting potential (collapsible, closed by default) -->
             <div class="info-card" style="margin-top:18px;">
                 <div class="info-card-header">
-                    <span class="info-card-icon">🌱</span>
+                    <img class="info-card-icon" src="icons/planting.png" alt="Tree planting">
                     <span class="info-card-title">Tree planting potential</span>
                 </div>
                 <div class="info-card-summary">Where could more trees be planted?</div>
@@ -997,7 +1023,7 @@
             <!-- District vs street view -->
             <div class="info-card" style="margin-top:18px;">
                 <div class="info-card-header">
-                    <span class="info-card-icon">🏙️</span>
+                    <img class="info-card-icon" src="icons/city.png" alt="District">
                     <span class="info-card-title">District vs street view</span>
                 </div>
                 <div class="info-card-summary">
