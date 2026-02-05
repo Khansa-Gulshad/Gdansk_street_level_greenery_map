@@ -1088,7 +1088,7 @@
             <span class="lg-bot">greenery</span>
             <span class="lg-bot">greenery</span>
         </div>
-        <div class="legend-note">Gray = No data</div>
+        <div class="legend-note" id="legend-note">Currently viewing: Districts</div>
     </div>
 
     <!-- Control Panel -->
@@ -1558,6 +1558,9 @@
                 '<span class="lg-bot">' + grid.bot[0] + '</span>' +
                 '<span class="lg-bot">' + grid.bot[1] + '</span>' +
                 '<span class="lg-bot">' + grid.bot[2] + '</span>';
+
+            document.getElementById('legend-note').textContent =
+                'Currently viewing: ' + (currentScale === 'district' ? 'Districts' : 'Streets');
         }
         
         function updateScale() {
